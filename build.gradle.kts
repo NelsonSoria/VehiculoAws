@@ -9,7 +9,7 @@ repositories {
     mavenLocal()
 }
 
-group = "com.prog.distribuida"
+group = "com.programacion.cloud"
 version = "1.0-SNAPSHOT"
 val quarkusVersion = "3.29.3"
 
