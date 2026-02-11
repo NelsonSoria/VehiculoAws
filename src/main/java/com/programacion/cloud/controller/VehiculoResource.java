@@ -9,6 +9,7 @@ import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
 
+import java.net.InetAddress;
 import java.util.List;
 
 @Path("/vehiculos")
@@ -47,6 +48,23 @@ public class VehiculoResource {
     @GET
     public List<VehiculoDTO> getAll() {
         return service.getAll();
+    }
+
+    @GET
+    @Path("/test")
+    public String test() throws Exception {
+
+        InetAddress localHost = InetAddress.getLocalHost();
+
+        return """
+        {
+          "hostname": "%s",
+          "ip_privada": "%s"
+        }
+        """.formatted(
+                localHost.getHostName(),
+                localHost.getHostAddress()
+        );
     }
 
 }
