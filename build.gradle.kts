@@ -23,6 +23,8 @@ dependencies {
     implementation("io.quarkus:quarkus-hibernate-orm")
     implementation("io.quarkus:quarkus-smallrye-health")
 
+    implementation("io.quarkus:quarkus-smallrye-openapi")
+
 }
 
 group = "org.acme"
